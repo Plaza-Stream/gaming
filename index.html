@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plaza Stream | Gaming</title>
+    <link rel="icon" type="image/png" href="./assets/icon-all-white.png">
+    <style>
+        :root {
+            --bg: #efe4d2;
+            --bg-soft: #f7efe3;
+            --green: #12382b;
+            --green-soft: #8fab8b;
+            --text: #17231d;
+            --muted: #647166;
+            --white: #fffaf2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.55), transparent 38%),
+                linear-gradient(135deg, var(--bg-soft), var(--bg));
+            color: var(--text);
+            display: grid;
+            place-items: center;
+            padding: 32px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 920px;
+            text-align: center;
+            animation: fadeIn 900ms ease both;
+        }
+
+        .logo-icon {
+            opacity: 0.9 !important;
+            display: block;
+
+            width: 140px;
+            height: auto;
+
+            margin: 0 auto 30px;
+
+            filter: drop-shadow(0 16px 28px rgba(18, 56, 43, 0.16));
+
+            animation: rise 900ms ease both;
+        }
+
+        .brand-wrap {
+            position: relative;
+            display: inline-block;
+            animation: rise 900ms ease 80ms both;
+        }
+
+        .brand {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            letter-spacing: 0.22em;
+            color: var(--green);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .brand span {
+            display: block;
+            margin-top: 18px;
+            font-size: clamp(1.1rem, 2.5vw, 1.7rem);
+            letter-spacing: 0.42em;
+            color: var(--green-soft);
+            font-weight: 500;
+        }
+
+        .divider {
+            width: 72px;
+            height: 1px;
+            background: var(--green-soft);
+            margin: 42px auto;
+            animation: expand 900ms ease 250ms both;
+        }
+
+        h1 {
+            max-width: 720px;
+            margin: 0 auto;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.05;
+            color: var(--green);
+            animation: rise 900ms ease 160ms both;
+        }
+
+        p {
+            max-width: 580px;
+            margin: 26px auto 0;
+            font-size: clamp(1rem, 2vw, 1.18rem);
+            line-height: 1.75;
+            color: var(--muted);
+            animation: rise 900ms ease 280ms both;
+        }
+
+        .cta {
+            margin-top: 44px;
+            animation: rise 900ms ease 420ms both;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 56px;
+            padding: 0 28px;
+            border-radius: 999px;
+            background: var(--green);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            box-shadow: 0 18px 40px rgba(18, 56, 43, 0.22);
+            transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 54px rgba(18, 56, 43, 0.28);
+            background: #0d2c21;
+        }
+
+        .note {
+            margin-top: 22px;
+            font-size: 0.85rem;
+            color: rgba(100, 113, 102, 0.82);
+            animation: fadeIn 900ms ease 650ms both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expand {
+            from {
+                opacity: 0;
+                width: 0;
+            }
+
+            to {
+                opacity: 1;
+                width: 72px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 24px;
+            }
+
+            .logo-icon {
+                width: 84px;
+                margin-bottom: 24px;
+            }
+
+            .brand {
+                letter-spacing: 0.16em;
+            }
+
+            .brand span {
+                letter-spacing: 0.28em;
+            }
+
+        }
+
+        .edition-label {
+            margin-top: 18px;
+
+            color: var(--green-soft);
+
+            font-size: 0.82rem;
+            font-weight: 500;
+
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+
+            opacity: 0.85;
+
+            animation: rise 900ms ease 120ms both;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <!-- <img class="logo-icon" src="./assets/icon.png" alt="Plaza Stream" /> -->
+
+        <div class="brand-wrap">
+            <div class="brand">
+                PLAZA
+                <span>STREAM</span>
+            </div>
+            <div class="edition-label">
+                Gaming Edition
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h1>Ofertas selecionadas fluindo direto para você.</h1>
+
+        <p>
+            Jogos, periféricos e hardware: entre no nosso grupo e receba oportunidades, promoções e achados de
+            marketplaces
+            em um só lugar, sem precisar procurar manualmente.
+        </p>
+
+        <div class="cta">
+            <a class="button" href="https://chat.whatsapp.com/Lktx0jrlQO6C6fXtIglb1F" target="_blank" rel="noopener noreferrer">
+                Entrar no grupo do WhatsApp
+            </a>
+        </div>
+
+        <div class="note">
+            Você pode sair do grupo quando quiser.
+        </div>
+    </main>
+</body>
+
+</html>
